@@ -129,6 +129,7 @@ Item {
                     Layout.fillWidth: true
                     Layout.preferredHeight: 20
                     to: 10000
+                    editable: true
                     value: _private.scpi.bandWidth
                     onValueModified: _private.scpi.bandWidth = value
                 }

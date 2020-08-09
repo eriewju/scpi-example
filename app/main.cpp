@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("scpiClient", scpi.get());
     QScopedPointer<ChartControl> chart;
 
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
+    const QUrl url(QStringLiteral("qrc:/QML/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated, &app,
                      [url, &chart, &scpi](QObject *obj, const QUrl &objUrl) {
         if (!obj) {
@@ -33,11 +33,6 @@ int main(int argc, char *argv[])
 
     }, Qt::QueuedConnection);
     engine.load(url);
-
-//    auto rootObject = engine.rootObjects().first();
-//    auto chartObject = rootObject->findChild<QObject*>("_chart");
-//    QScopedPointer<ChartControl> chart(new ChartControl(chartObject));
-//    scpi->addUpdater(chart.get());
 
     return app.exec();
 }
