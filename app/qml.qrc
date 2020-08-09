@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>ControlsPanel.qml</file>
+        <file>ChartPanel.qml</file>
     </qresource>
 </RCC>
